@@ -1,0 +1,18 @@
+# GitHub configs
+.github
+
+# development-related files
+.editorconfig
+.gitattributes
+
+# release config
+.releaserc
+
+# scripts
+/scripts
+
+# tests
+/tests
+
+# sources
+/src
