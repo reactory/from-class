@@ -16,8 +16,7 @@
   "scripts": {
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
-    "test": "jest --config=.jestrc.json",
-    "coverage": "codecov",
+    "test": "jest",
     "build": "echo \"skip build\"",
     "release:prepare": "rm -rf dist && mkdir dist && cp src/*.* LICENSE* package* README* dist/",
     "release": "npm run release:prepare && semantic-release"
@@ -39,6 +38,20 @@
   "standard": {
     "envs": [
       "jest"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "lcov",
+      "text"
     ]
   },
   "publishConfig": {

@@ -29,7 +29,7 @@ jobs:
     - run: npm ci
     - run: npm run lint
     - run: npm test -- --coverage
-    - run: npm run coverage
+    - run: npx codecov
 
     env:
       CI: true
