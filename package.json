@@ -18,10 +18,15 @@
     "lint:fix": "standard --fix",
     "test": "jest --config=.jestrc.json",
     "coverage": "codecov",
+    "build": "echo \"skip build\"",
     "release:prepare": "rm -rf dist && mkdir dist && cp src/*.* LICENSE* package* README* dist/",
     "release": "npm run release:prepare && semantic-release"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^25.1.4",
+    "babel-jest": "^25.1.0",
     "codecov": "^3.6.5",
     "jest": "^25.1.0",
     "semantic-release": "^17.0.4",
