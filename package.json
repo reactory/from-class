@@ -1,7 +1,7 @@
 {
   "name": "@reactory/from-class",
   "version": "0.0.0-development",
-  "description": "A simple JavaScript utility function for React to easily manage the className property.",
+  "description": "A simple JavaScript utility function for React to easily manage CSS classes via the className attribute.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "ISC",
   "homepage": "https://github.com/reactory/from-class#readme",
@@ -16,15 +16,22 @@
   "scripts": {
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config=.jestrc.json",
+    "coverage": "codecov",
     "release:prepare": "rm -rf dist && mkdir dist && cp src/*.* LICENSE* package* README* dist/",
     "release": "npm run release:prepare && semantic-release"
   },
   "devDependencies": {
+    "codecov": "^3.6.5",
     "jest": "^25.1.0",
     "semantic-release": "^17.0.4",
     "snazzy": "^8.0.0",
     "standard": "^14.3.3"
+  },
+  "standard": {
+    "envs": [
+      "jest"
+    ]
   },
   "publishConfig": {
     "access": "public"

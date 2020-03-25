@@ -28,10 +28,12 @@ jobs:
 
     - run: npm ci
     - run: npm run lint
-    - run: npm test
+    - run: npm test -- --coverage
+    - run: npm run coverage
 
     env:
       CI: true
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   release:
     needs: test
